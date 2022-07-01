@@ -16,12 +16,12 @@ function Table() {
   const toggleActive = (linkId) => {
     setLinks((links) =>
       links.map((link) => {
-        if (link.id === linkId) {
-          return { ...link, isActive: !link.isActive };
-        } 
         for(let i = 0; i < links.length; i++){
-          if(links[i].isActive === true){
-            return {isActive: !link.isActive}
+            if(link.id !== linkId) {
+              return {...link, isActive: false}
+            }
+          if(link.id === linkId) {
+            return {...link, isActive: !link.isActive}
           }
         }
         return link;
