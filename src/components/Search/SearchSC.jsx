@@ -29,9 +29,17 @@ export const SearchLink = styled.a`
   transition: .3s ease-in-out;
   background: ${(props) =>
     props.active ? '#E9DC3B' : "none"};
+  :hover{
+    background: #e9dc3b;
+    color: #000;
+  }
+  :hover span{
+    color: #000;
+  }
 `;
 export const SearchLinkSpan = styled.span`
   font-weight: 700;
+  transition: .3s ease-in-out;
   color: ${(props) =>
     props.active ? '#000' : "#e9dc3b"};
 `;

@@ -1,6 +1,19 @@
 import React, { useState } from "react";
 import { Container } from "../../uikit/ContainerSC";
-import { TableContent, TableRightLink, TableRightMenu, TableSC } from "./TableSC";
+import TableItem from "../TableItem/TableItem";
+import IconFourSVG from "./IconFourSVG";
+import IconOneSVG from "./IconOneSVG";
+import IconThreeSVG from "./IconThreeSVG";
+import IconTwoSVG from "./IconTwoSVG";
+import {
+  TableContent,
+  TableLeftImg,
+  TableLeftLink,
+  TableLeftMenu,
+  TableRightLink,
+  TableRightMenu,
+  TableSC,
+} from "./TableSC";
 
 function Table() {
   const [links, setLinks] = useState([
@@ -15,17 +28,7 @@ function Table() {
 
   const toggleActive = (linkId) => {
     setLinks((links) =>
-      links.map((link) => {
-        for(let i = 0; i < links.length; i++){
-            if(link.id !== linkId) {
-              return {...link, isActive: false}
-            }
-          if(link.id === linkId) {
-            return {...link, isActive: !link.isActive}
-          }
-        }
-        return link;
-      })
+      links.map((link) => linkId !== link.id ? {...link, isActive: false} : linkId === link.id ? {...link, isActive: !link.isActive} : link)
     );
   };
   return (
@@ -45,6 +48,21 @@ function Table() {
                 </React.Fragment>
               ))}
             </TableRightMenu>
+            <TableItem/>
+            <TableLeftMenu>
+              <TableLeftLink>
+                <IconOneSVG/>
+              </TableLeftLink>
+              <TableLeftLink>
+                <IconTwoSVG/>
+              </TableLeftLink>
+              <TableLeftLink>
+                <IconThreeSVG/>
+              </TableLeftLink>
+              <TableLeftLink>
+                <IconFourSVG/>
+              </TableLeftLink>
+            </TableLeftMenu>
           </TableContent>
         </Container>
       </TableSC>

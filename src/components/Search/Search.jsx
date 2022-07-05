@@ -24,15 +24,16 @@ function Search() {
   ]);
 
   const toggleActive = (linkId) => {
-    setLinks(links => links.map(link => {
-      if(link.id === linkId) {
-        return {...link, isActive: !link.isActive}
-      }
-
-      return link
-    }));
+    setLinks((links) =>
+      links.map((link) =>
+        linkId !== link.id
+          ? { ...link, isActive: false }
+          : linkId === link.id
+          ? { ...link, isActive: !link.isActive }
+          : link
+      )
+    );
   };
-
   return (
     <>
       <SearchSC>
@@ -41,7 +42,10 @@ function Search() {
             <SearchLinks>
               {links.map((link) => (
                 <React.Fragment key={link.id}>
-                  <SearchLink active={link.isActive} onClick={() => toggleActive(link.id)}>
+                  <SearchLink
+                    active={link.isActive}
+                    onClick={() => toggleActive(link.id)}
+                  >
                     {link.name} -{" "}
                     <SearchLinkSpan active={link.isActive}>
                       {link.count}
