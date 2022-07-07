@@ -1,7 +1,137 @@
-import React from 'react'
-import { TableCol, TableColImg, TableColText, TableColTitle, TableItemSC, TableTitles } from './TableItemSC'
+import React, { useEffect } from "react";
+import {
+  TableCol,
+  TableColImg,
+  TableColText,
+  TableColTitle,
+  TableItemSC,
+  TableTitles,
+} from "./TableItemSC";
 
-function TableItem() {
+function TableItem({setTableCount}) {
+  const tableInfo = [
+    {
+      id: 1,
+      img: './images/tesla-img.png',
+      name: "Tesla INC",
+      ticket: "TSLA.US",
+      buy: 1042.25,
+      sale: 1043,
+      market: 1042.5,
+      date: "06.04.2022",
+    },
+    {
+      id: 2,
+      img: './images/tesla-img.png',
+      name: "Tesla INC",
+      ticket: "TSLA.US",
+      buy: 1042.25,
+      sale: 1043,
+      market: 1042.5,
+      date: "06.04.2022",
+    },
+    {
+      id: 3,
+      img: './images/tesla-img.png',
+      name: "Tesla INC",
+      ticket: "TSLA.US",
+      buy: 1042.25,
+      sale: 1043,
+      market: 1042.5,
+      date: "06.04.2022",
+    },
+    {
+      id: 4,
+      img: './images/tesla-img.png',
+      name: "Tesla INC",
+      ticket: "TSLA.US",
+      buy: 1042.25,
+      sale: 1043,
+      market: 1042.5,
+      date: "06.04.2022",
+    },
+    {
+      id: 5,
+      img: './images/tesla-img.png',
+      name: "Tesla INC",
+      ticket: "TSLA.US",
+      buy: 1042.25,
+      sale: 1043,
+      market: 1042.5,
+      date: "06.04.2022",
+    },
+    {
+      id: 6,
+      img: './images/tesla-img.png',
+      name: "Tesla INC",
+      ticket: "TSLA.US",
+      buy: 1042.25,
+      sale: 1043,
+      market: 1042.5,
+      date: "06.04.2022",
+    },
+    {
+      id: 7,
+      img: './images/tesla-img.png',
+      name: "Tesla INC",
+      ticket: "TSLA.US",
+      buy: 1042.25,
+      sale: 1043,
+      market: 1042.5,
+      date: "06.04.2022",
+    },
+    {
+      id: 8,
+      img: './images/tesla-img.png',
+      name: "Tesla INC",
+      ticket: "TSLA.US",
+      buy: 1042.25,
+      sale: 1043,
+      market: 1042.5,
+      date: "06.04.2022",
+    },
+    {
+      id: 9,
+      img: './images/tesla-img.png',
+      name: "Tesla INC",
+      ticket: "TSLA.US",
+      buy: 1042.25,
+      sale: 1043,
+      market: 1042.5,
+      date: "06.04.2022",
+    },
+    {
+      id: 10,
+      img: './images/tesla-img.png',
+      name: "Tesla INC",
+      ticket: "TSLA.US",
+      buy: 1042.25,
+      sale: 1043,
+      market: 1042.5,
+      date: "06.04.2022",
+    },
+    {
+      id: 11,
+      img: './images/tesla-img.png',
+      name: "Tesla INC",
+      ticket: "TSLA.US",
+      buy: 1042.25,
+      sale: 1043,
+      market: 1042.5,
+      date: "06.04.2022",
+    },
+    {
+      id: 12,
+      img: './images/tesla-img.png',
+      name: "Tesla INC",
+      ticket: "TSLA.US",
+      buy: 1042.25,
+      sale: 1043,
+      market: 1042.5,
+      date: "06.04.2022",
+    },
+  ];
+  useEffect(() => setTableCount(tableInfo.length))
   return (
     <>
       <TableItemSC>
@@ -13,105 +143,22 @@ function TableItem() {
           <TableColTitle>Рыночная цена</TableColTitle>
           <TableColTitle>Время сделки</TableColTitle>
         </TableTitles>
-        <TableCol>
-          <TableColText><TableColImg src='./images/tesla-img.png'/>Tesla INC</TableColText>
-          <TableColText uppercase>TSLA.US</TableColText>
-          <TableColText green>1042.25</TableColText>
-          <TableColText red>1043</TableColText>
-          <TableColText>1042.5</TableColText>
-          <TableColText>06.04.2022</TableColText>
-        </TableCol>
-        <TableCol>
-          <TableColText><TableColImg src='./images/tesla-img.png'/>Tesla INC</TableColText>
-          <TableColText uppercase>TSLA.US</TableColText>
-          <TableColText green>1042.25</TableColText>
-          <TableColText red>1043</TableColText>
-          <TableColText>1042.5</TableColText>
-          <TableColText>06.04.2022</TableColText>
-        </TableCol>
-        <TableCol>
-          <TableColText><TableColImg src='./images/tesla-img.png'/>Tesla INC</TableColText>
-          <TableColText uppercase>TSLA.US</TableColText>
-          <TableColText green>1042.25</TableColText>
-          <TableColText red>1043</TableColText>
-          <TableColText>1042.5</TableColText>
-          <TableColText>06.04.2022</TableColText>
-        </TableCol>
-        <TableCol>
-          <TableColText><TableColImg src='./images/tesla-img.png'/>Tesla INC</TableColText>
-          <TableColText uppercase>TSLA.US</TableColText>
-          <TableColText green>1042.25</TableColText>
-          <TableColText red>1043</TableColText>
-          <TableColText>1042.5</TableColText>
-          <TableColText>06.04.2022</TableColText>
-        </TableCol>
-        <TableCol>
-          <TableColText><TableColImg src='./images/tesla-img.png'/>Tesla INC</TableColText>
-          <TableColText uppercase>TSLA.US</TableColText>
-          <TableColText green>1042.25</TableColText>
-          <TableColText red>1043</TableColText>
-          <TableColText>1042.5</TableColText>
-          <TableColText>06.04.2022</TableColText>
-        </TableCol>
-        <TableCol>
-          <TableColText><TableColImg src='./images/tesla-img.png'/>Tesla INC</TableColText>
-          <TableColText uppercase>TSLA.US</TableColText>
-          <TableColText green>1042.25</TableColText>
-          <TableColText red>1043</TableColText>
-          <TableColText>1042.5</TableColText>
-          <TableColText>06.04.2022</TableColText>
-        </TableCol>
-        <TableCol>
-          <TableColText><TableColImg src='./images/tesla-img.png'/>Tesla INC</TableColText>
-          <TableColText uppercase>TSLA.US</TableColText>
-          <TableColText green>1042.25</TableColText>
-          <TableColText red>1043</TableColText>
-          <TableColText>1042.5</TableColText>
-          <TableColText>06.04.2022</TableColText>
-        </TableCol>
-        <TableCol>
-          <TableColText><TableColImg src='./images/tesla-img.png'/>Tesla INC</TableColText>
-          <TableColText uppercase>TSLA.US</TableColText>
-          <TableColText green>1042.25</TableColText>
-          <TableColText red>1043</TableColText>
-          <TableColText>1042.5</TableColText>
-          <TableColText>06.04.2022</TableColText>
-        </TableCol>
-        <TableCol>
-          <TableColText><TableColImg src='./images/tesla-img.png'/>Tesla INC</TableColText>
-          <TableColText uppercase>TSLA.US</TableColText>
-          <TableColText green>1042.25</TableColText>
-          <TableColText red>1043</TableColText>
-          <TableColText>1042.5</TableColText>
-          <TableColText>06.04.2022</TableColText>
-        </TableCol>
-        <TableCol>
-          <TableColText><TableColImg src='./images/tesla-img.png'/>Tesla INC</TableColText>
-          <TableColText uppercase>TSLA.US</TableColText>
-          <TableColText green>1042.25</TableColText>
-          <TableColText red>1043</TableColText>
-          <TableColText>1042.5</TableColText>
-          <TableColText>06.04.2022</TableColText>
-        </TableCol>
-        <TableCol>
-          <TableColText><TableColImg src='./images/tesla-img.png'/>Tesla INC</TableColText>
-          <TableColText uppercase>TSLA.US</TableColText>
-          <TableColText green>1042.25</TableColText>
-          <TableColText red>1043</TableColText>
-          <TableColText>1042.5</TableColText>
-          <TableColText>06.04.2022</TableColText>
-        </TableCol>
-        <TableCol>
-          <TableColText><TableColImg src='./images/tesla-img.png'/>Tesla INC</TableColText>
-          <TableColText uppercase>TSLA.US</TableColText>
-          <TableColText green>1042.25</TableColText>
-          <TableColText red>1043</TableColText>
-          <TableColText>1042.5</TableColText>
-          <TableColText>06.04.2022</TableColText>
-        </TableCol>
+        {tableInfo.map((tableItem) => (
+          <TableCol key={tableItem.id}>
+            <TableColText>
+              <TableColImg src={tableItem.img} />
+              {tableItem.name}
+            </TableColText>
+            <TableColText uppercase>{tableItem.ticket}</TableColText>
+            <TableColText green>{tableItem.buy}</TableColText>
+            <TableColText red>{tableItem.sale}</TableColText>
+            <TableColText>{tableItem.market}</TableColText>
+            <TableColText>{tableItem.date}</TableColText>
+          </TableCol>
+        ))}
       </TableItemSC>
     </>
-  )
+  );
 }
 
-export default TableItem
+export default TableItem;

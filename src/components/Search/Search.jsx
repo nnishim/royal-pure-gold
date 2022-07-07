@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Container } from "../../uikit/ContainerSC";
 import {
   SearchContent,
@@ -11,18 +11,20 @@ import {
   SearchSC,
 } from "./SearchSC";
 
-function Search() {
-  // const [active, setActive] = useState(false);
-  // const toggleActive = () => {
-  //   setActive(!active);
-  // };
-
+function Search({tableCount}) {
   const [links, setLinks] = useState([
     { id: 1, name: "Акции", count: 50, isActive: false },
     { id: 2, name: "Облигации", count: 0, isActive: false },
     { id: 3, name: "Фонды", count: 1, isActive: false },
   ]);
-
+  // useEffect(() => {
+  //   setLinks(links => links.map((link, i) => {
+  //     if(i === 0){
+  //       return {...link, count: tableCount}
+  //     }
+  //     return link
+  //   }))
+  // })
   const toggleActive = (linkId) => {
     setLinks((links) =>
       links.map((link) =>

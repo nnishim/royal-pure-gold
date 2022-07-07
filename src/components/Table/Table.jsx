@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Container } from "../../uikit/ContainerSC";
 import TableItem from "../TableItem/TableItem";
-import IconFourSVG from "./IconFourSVG";
-import IconOneSVG from "./IconOneSVG";
-import IconThreeSVG from "./IconThreeSVG";
-import IconTwoSVG from "./IconTwoSVG";
+import IconOneSVG from "./Icons/IconFourSVG";
+import IconFourSVG from "./Icons/IconOneSVG";
+import IconThreeSVG from "./Icons/IconThreeSVG";
+import IconTwoSVG from "./Icons/IconTwoSVG";
 import {
   TableContent,
   TableLeftImg,
@@ -15,7 +15,7 @@ import {
   TableSC,
 } from "./TableSC";
 
-function Table() {
+function Table({ setTableCount }) {
   const [links, setLinks] = useState([
     { id: 1, name: "Кыргызстан", isActive: false },
     { id: 2, name: "США", isActive: false },
@@ -26,9 +26,49 @@ function Table() {
     { id: 7, name: "Валютный рынок", isActive: false },
   ]);
 
+  const [icons, setIcons] = useState([
+    {
+      id: 1,
+      item: <IconOneSVG />,
+      isActive: false,
+    },
+    {
+      id: 2,
+      item: <IconTwoSVG />,
+      isActive: false,
+    },
+    {
+      id: 3,
+      item: <IconThreeSVG />,
+      isActive: false,
+    },
+    {
+      id: 4,
+      item: <IconFourSVG />,
+      isActive: false,
+    },
+  ]);
+
   const toggleActive = (linkId) => {
     setLinks((links) =>
-      links.map((link) => linkId !== link.id ? {...link, isActive: false} : linkId === link.id ? {...link, isActive: !link.isActive} : link)
+      links.map((link) =>
+        linkId !== link.id
+          ? { ...link, isActive: false }
+          : linkId === link.id
+          ? { ...link, isActive: !link.isActive }
+          : link
+      )
+    );
+  };
+  const toggleActiveIcon = (iconId) => {
+    setIcons((icons) =>
+      icons.map((icon) =>
+        iconId !== icon.id
+          ? { ...icon, isActive: false }
+          : iconId === icon.id
+          ? { ...icon, isActive: !icon.isActive }
+          : icon
+      )
     );
   };
   return (
@@ -48,20 +88,13 @@ function Table() {
                 </React.Fragment>
               ))}
             </TableRightMenu>
-            <TableItem/>
+            <TableItem setTableCount={setTableCount} />
             <TableLeftMenu>
-              <TableLeftLink>
-                <IconOneSVG/>
-              </TableLeftLink>
-              <TableLeftLink>
-                <IconTwoSVG/>
-              </TableLeftLink>
-              <TableLeftLink>
-                <IconThreeSVG/>
-              </TableLeftLink>
-              <TableLeftLink>
-                <IconFourSVG/>
-              </TableLeftLink>
+              {icons.map((icon) => {
+                <TableLeftLink key={icon.id}>
+                  {icon.item}
+                </TableLeftLink>;
+              })}
             </TableLeftMenu>
           </TableContent>
         </Container>

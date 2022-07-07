@@ -7,14 +7,17 @@ import Table from "./components/Table/Table";
 import { Wrapper } from "./uikit/WrapperSC";
 import {Route, Routes ,Link} from 'react-router-dom';
 import FooterItemText from "./components/FooterItemText/FooterItemText";
+import { useState } from "react";
 
 
 function App() {
+  const [tableCount, setTableCount] = useState(null)
+  
   return (
     <Wrapper>
       <Header />
-      <Search />
-      <Table />
+      <Search tableCount={tableCount}/>
+      <Table setTableCount={setTableCount} />
       <Footer />
     </Wrapper>
   );

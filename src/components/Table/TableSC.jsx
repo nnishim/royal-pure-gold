@@ -32,16 +32,8 @@ export const TableLeftMenu = styled.div`
   row-gap: 50px;
   margin-left: 160px;
   align-self: center;
-
 `;
-export const TableLeftLink = styled.a`
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
-  color: ${(props) => (props.active ? "#E9DC3B" : "#f5f5f5")};
-  :hover {
-    color: #e9dc3b;
-  }
-`;
+export const TableLeftLink = styled.a``;
 export const TableLeftImg = styled.svg`
   cursor: pointer;
   transition: 0.3s ease-in-out;

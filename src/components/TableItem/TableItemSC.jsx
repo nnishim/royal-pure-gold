@@ -12,10 +12,9 @@ export const TableItemSC = styled.div`
 export const TableCol = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
   margin-right: ${(props) => (props.right ? "65px" : "0")};
   margin-bottom: 20px;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
   padding: 5px 3px;
   cursor: pointer;
   :hover {
@@ -26,15 +25,17 @@ export const TableCol = styled.div`
 export const TableTitles = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
   margin-bottom: 26px;
 `;
 export const TableColTitle = styled.h2`
   font-weight: 400;
   font-size: 16px;
   color: #f5f5f5;
+  flex: 0 1 16.666%;
 `;
 export const TableColText = styled.span`
+  flex: ${(props) =>
+    props.notFlex ? 'none' : "0 1 16.666%"};
   font-weight: 400;
   font-size: 16px;
   color: ${(props) =>

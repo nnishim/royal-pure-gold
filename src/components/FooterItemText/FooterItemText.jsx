@@ -7,49 +7,49 @@ function FooterItemText() {
     <>
       <FooterTextBlock>
         <FooterText>Инструмент</FooterText>
-        <FooterText>Количествоя</FooterText>
+        <FooterText>Количество</FooterText>
         <FooterText>Цена</FooterText>
       </FooterTextBlock>
       <FooterTable>
         <FooterTableCol>
-          <TableColText>
+          <TableColText notFlex>
             <TableColImg src="./images/tesla-img.png" />
             Tesla INC
           </TableColText>
-          <TableColText green>1042.25</TableColText>
+          <TableColText notFlex green>1042.25</TableColText>
           <TableColText>1043$</TableColText>
         </FooterTableCol>
         <FooterTableCol>
-          <TableColText>
+          <TableColText notFlex>
             <TableColImg src="./images/tesla-img.png" />
             Tesla INC
           </TableColText>
-          <TableColText green>1042.25</TableColText>
+          <TableColText notFlex green>1042.25</TableColText>
           <TableColText>1043$</TableColText>
         </FooterTableCol>
         <FooterTableCol>
-          <TableColText>
+          <TableColText notFlex>
             <TableColImg src="./images/tesla-img.png" />
             Tesla INC
           </TableColText>
-          <TableColText green>1042.25</TableColText>
+          <TableColText notFlex green>1042.25</TableColText>
           <TableColText>1043$</TableColText>
         </FooterTableCol>
         <FooterTableCol>
-          <TableColText>
+          <TableColText notFlex>
             <TableColImg src="./images/tesla-img.png" />
             Tesla INC
           </TableColText>
-          <TableColText green>1042.25</TableColText>
+          <TableColText notFlex green>1042.25</TableColText>
           <TableColText>1043$</TableColText>
         </FooterTableCol>
         <FooterTableCol>
-          <TableColText>
+          <TableColText notFlex>
             <TableColImg src="./images/tesla-img.png" />
             Tesla INC
           </TableColText>
-          <TableColText green>1042.25</TableColText>
-          <TableColText>1043$</TableColText>
+          <TableColText notFlex green>1042.25</TableColText>
+          <TableColText notFlex>1043$</TableColText>
         </FooterTableCol>
       </FooterTable>
     </>
