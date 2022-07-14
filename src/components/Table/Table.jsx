@@ -13,6 +13,7 @@ import {
   TableRightLink,
   TableRightMenu,
   TableSC,
+  Tooltip,
 } from "./TableSC";
 
 function Table({ setTableCount }) {
@@ -26,29 +27,6 @@ function Table({ setTableCount }) {
     { id: 7, name: "Валютный рынок", isActive: false },
   ]);
 
-  const [icons, setIcons] = useState([
-    {
-      id: 1,
-      item: <IconOneSVG />,
-      isActive: false,
-    },
-    {
-      id: 2,
-      item: <IconTwoSVG />,
-      isActive: false,
-    },
-    {
-      id: 3,
-      item: <IconThreeSVG />,
-      isActive: false,
-    },
-    {
-      id: 4,
-      item: <IconFourSVG />,
-      isActive: false,
-    },
-  ]);
-
   const toggleActive = (linkId) => {
     setLinks((links) =>
       links.map((link) =>
@@ -60,17 +38,25 @@ function Table({ setTableCount }) {
       )
     );
   };
-  const toggleActiveIcon = (iconId) => {
-    setIcons((icons) =>
-      icons.map((icon) =>
-        iconId !== icon.id
-          ? { ...icon, isActive: false }
-          : iconId === icon.id
-          ? { ...icon, isActive: !icon.isActive }
-          : icon
-      )
-    );
-  };
+
+  const [icons, setIcons] = useState([
+    { id: 1, img: <IconOneSVG />, text: "Спот", isActive: false },
+    { id: 2, img: <IconTwoSVG />, text: "Спот", isActive: false },
+    { id: 3, img: <IconThreeSVG />, text: "Спот", isActive: false },
+    { id: 4, img: <IconFourSVG />, text: "Спот", isActive: false },
+  ]);
+  // const toggleActiveIcon = (iconId) => {
+  //   setIcons((icons) =>
+  //     icons.map((icon) =>
+  //       iconId !== icon.id
+  //         ? { ...icon, isActive: false }
+  //         : iconId === icon.id
+  //         ? { ...icon, isActive: !icon.isActive }
+  //         : icon
+  //     )
+  //   );
+  // };
+
   return (
     <>
       <TableSC>
@@ -90,11 +76,22 @@ function Table({ setTableCount }) {
             </TableRightMenu>
             <TableItem setTableCount={setTableCount} />
             <TableLeftMenu>
-              {icons.map((icon) => {
-                <TableLeftLink key={icon.id}>
-                  {icon.item}
-                </TableLeftLink>;
-              })}
+              <TableLeftLink>
+                <Tooltip>Спот</Tooltip>
+                <IconOneSVG />
+              </TableLeftLink>
+              <TableLeftLink>
+                <Tooltip>Спот</Tooltip>
+                <IconTwoSVG />
+              </TableLeftLink>
+              <TableLeftLink>
+                <Tooltip>Спот</Tooltip>
+                <IconThreeSVG />
+              </TableLeftLink>
+              <TableLeftLink>
+                <Tooltip>Спот</Tooltip>
+                <IconFourSVG />
+              </TableLeftLink>
             </TableLeftMenu>
           </TableContent>
         </Container>

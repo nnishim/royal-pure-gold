@@ -33,7 +33,14 @@ export const TableLeftMenu = styled.div`
   margin-left: 160px;
   align-self: center;
 `;
-export const TableLeftLink = styled.a``;
+export const TableLeftLink = styled.a`
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  :hover span{
+    opacity: 1;
+  }
+`;
 export const TableLeftImg = styled.svg`
   cursor: pointer;
   transition: 0.3s ease-in-out;
@@ -41,4 +48,11 @@ export const TableLeftImg = styled.svg`
   :hover {
     color: #e9dc3b;
   }
+`;
+export const Tooltip = styled.span`
+  color: #e9dc3b;
+  font-weight: 400;
+  font-size: 16px;
+  opacity: 0;
+  transition: .3s ease-in-out;
 `;

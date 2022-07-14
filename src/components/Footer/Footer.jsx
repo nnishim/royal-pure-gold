@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Container } from "../../uikit/ContainerSC";
-import { TableColImg, TableColText } from "../TableItem/TableItemSC";
 import { Route, Routes, Link } from "react-router-dom";
 import {
   FooterItem,
@@ -13,8 +12,6 @@ import {
   FooterButtons,
   FooterContent,
   FooterButton,
-  FooterTable,
-  FooterTableCol,
 } from "./FooterSC";
 import FooterInputField from "../FooterInputField/FooterInputField";
 import FooterItemText from "../FooterItemText/FooterItemText";

@@ -8,6 +8,7 @@ import { Wrapper } from "./uikit/WrapperSC";
 import {Route, Routes ,Link} from 'react-router-dom';
 import FooterItemText from "./components/FooterItemText/FooterItemText";
 import { useState } from "react";
+import Diagram from "./components/Diagram/Diagram";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <Header />
       <Search tableCount={tableCount}/>
       <Table setTableCount={setTableCount} />
+      <Diagram/>
       <Footer />
     </Wrapper>
   );

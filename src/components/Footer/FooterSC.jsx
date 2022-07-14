@@ -67,12 +67,13 @@ export const FooterButtons = styled.div`
   display: flex;
   align-items: center;
 `;
-export const FooterButton = styled.a`
+export const FooterButton = styled.button`
   font-weight: 400;
   font-size: 16px;
   padding: 16px 45px;
   display: flex;
   align-items: center;
+  border: none;
   gap: 5px;
   color: ${(props) => (props.active ? "#000" : "#f5f5f5")};
   cursor: pointer;
