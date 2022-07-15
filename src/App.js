@@ -9,6 +9,7 @@ import {Route, Routes ,Link} from 'react-router-dom';
 import FooterItemText from "./components/FooterItemText/FooterItemText";
 import { useState } from "react";
 import Diagram from "./components/Diagram/Diagram";
+import SaleForm from "./components/SaleForm/SaleForm";
 
 
 function App() {
@@ -16,11 +17,11 @@ function App() {
   
   return (
     <Wrapper>
-      <Header />
+      {/* <Header />
       <Search tableCount={tableCount}/>
       <Table setTableCount={setTableCount} />
-      <Diagram/>
-      <Footer />
+      <Footer /> */}
+      <SaleForm/>
     </Wrapper>
   );
 }
