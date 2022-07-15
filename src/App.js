@@ -10,6 +10,7 @@ import FooterItemText from "./components/FooterItemText/FooterItemText";
 import { useState } from "react";
 import Diagram from "./components/Diagram/Diagram";
 import SaleForm from "./components/SaleForm/SaleForm";
+import NewsMenu from "./components/NewsMenu/NewsMenu";
 
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
       <Search tableCount={tableCount}/>
       <Table setTableCount={setTableCount} />
       <Footer /> */}
-      <SaleForm/>
+      <NewsMenu/>
     </Wrapper>
   );
 }

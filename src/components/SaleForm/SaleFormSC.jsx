@@ -1,15 +1,5 @@
 import styled from "styled-components";
 
-export const SaleFormSC = styled.div`
-  min-height: 100vh;
-  max-width: 480px;
-  padding: 55px 40px;
-  background: #2e2e2e;
-  border-radius: 30px 0px 0px 30px;
-  position: absolute;
-  right: 0;
-  top: 0;
-`;
 export const FormButtons = styled.div`
   display: flex;
   align-items: center;

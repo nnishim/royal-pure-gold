@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { RightMenuSC } from "../../uikit/RightMenuSC";
 import {
   FormButton,
   FormButtonBlock,
@@ -42,7 +43,7 @@ function SaleForm() {
 
   return (
     <>
-      <SaleFormSC>
+      <RightMenuSC>
         <FormButtons>
           {buttons.map((button) => {
             return (
@@ -77,7 +78,7 @@ function SaleForm() {
           })}
           <FormButtonSubmit>Купить</FormButtonSubmit>
         </FormInputFields>
-      </SaleFormSC>
+      </RightMenuSC>
     </>
   );
 }
