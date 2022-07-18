@@ -13,8 +13,8 @@ import {
   FooterContent,
   FooterButton,
 } from "./FooterSC";
-import FooterInputField from "../FooterInputField/FooterInputField";
-import FooterItemText from "../FooterItemText/FooterItemText";
+import FooterInputField from "./FooterInputField/FooterInputField";
+import FooterItemText from "./FooterItemText/FooterItemText";
 
 function Footer() {
   const [links, setLinks] = useState([

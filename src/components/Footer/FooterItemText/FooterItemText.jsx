@@ -1,6 +1,6 @@
 import React from "react";
-import { FooterTable, FooterTableCol, FooterText, FooterTextBlock } from "../Footer/FooterSC";
-import { TableColImg, TableColText } from "../TableItem/TableItemSC";
+import { FooterTable, FooterTableCol, FooterText, FooterTextBlock } from "../FooterSC";
+import { TableColImg, TableColText } from "../../Table/TableItem/TableItemSC";
 
 function FooterItemText() {
   return (

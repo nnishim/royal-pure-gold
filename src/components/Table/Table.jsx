@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Container } from "../../uikit/ContainerSC";
-import TableItem from "../TableItem/TableItem";
+import TableItem from "./TableItem/TableItem";
 import IconOneSVG from "./Icons/IconFourSVG";
 import IconFourSVG from "./Icons/IconOneSVG";
 import IconThreeSVG from "./Icons/IconThreeSVG";
