@@ -1,5 +1,6 @@
-import React, { useEffect } from "react";
+import React, {useEffect, useState} from "react";
 import {
+  Modal,
   TableCol,
   TableColImg,
   TableColText,
@@ -7,6 +8,8 @@ import {
   TableItemSC,
   TableTitles,
 } from "./TableItemSC";
+import Diagram from "../../Diagram/Diagram";
+
 
 function TableItem({setTableCount}) {
   const tableInfo = [
@@ -132,6 +135,8 @@ function TableItem({setTableCount}) {
     },
   ];
   useEffect(() => setTableCount(tableInfo.length))
+  const [isActive, setIsActive] = useState(false);
+
   return (
     <>
       <TableItemSC>
@@ -144,9 +149,9 @@ function TableItem({setTableCount}) {
           <TableColTitle>Время сделки</TableColTitle>
         </TableTitles>
         {tableInfo.map((tableItem) => (
-          <TableCol key={tableItem.id}>
+          <TableCol onClick={() => setIsActive(true)}  key={tableItem.id}>
             <TableColText>
-              <TableColImg src={tableItem.img} />
+              <TableColImg src={tableItem.img}/>
               {tableItem.name}
             </TableColText>
             <TableColText uppercase>{tableItem.ticket}</TableColText>
@@ -156,6 +161,9 @@ function TableItem({setTableCount}) {
             <TableColText>{tableItem.date}</TableColText>
           </TableCol>
         ))}
+          <Modal active={isActive} onClick={() => setIsActive(false)}>
+            <Diagram active={isActive} />
+          </Modal>
       </TableItemSC>
     </>
   );

@@ -8,6 +8,7 @@ import {
 } from "./BankingMenuSC";
 import BankingTopUp from "./BankingTopUp/BankingTopUp";
 
+
 function BankingMenu() {
   const [buttons, setButtons] = useState([
     { id: 1, name: "Пополнить", href: "/top-up", isActive: false },
@@ -33,22 +34,24 @@ function BankingMenu() {
           <BankingMenuButtons>
             {buttons.map((button) => {
               return (
-                <Link key={button.id} to={button.href}>
+                // <Link key={button.id} to={button.href}>
                   <BankingMenuButton
+                    key={button.id}
                     active={button.isActive}
                     onClick={() => toggleActiveButton(button.id)}
                   >
                     {button.name}
                   </BankingMenuButton>
-                </Link>
+                // </Link>
               );
             })}
           </BankingMenuButtons>
-          <Routes>
-            <Route path="top-up" element={<BankingTopUp/>} />
-            <Route path="/translation" element={''} />
-            <Route path="/withdraw" element={''} />
-          </Routes>
+          <BankingTopUp/>
+          {/*<Routes>*/}
+          {/*  <Route path="/top-up" element={<BankingTopUp/>} />*/}
+          {/*  <Route path="/translation" element={''} />*/}
+          {/*  <Route path="/withdraw" element={''} />*/}
+          {/*</Routes>*/}
         </BankingMenuSC>
       </RightMenuSC>
     </>

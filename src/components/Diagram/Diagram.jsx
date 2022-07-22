@@ -1,6 +1,7 @@
 import React from "react";
 import { Chart, registerables } from "chart.js";
 import { Line } from "react-chartjs-2";
+
 import { DiagramNum, DiagramSC, DiagramTitle, DiagramTop, DiagramYear, DiagramYears } from "./DiagramSC";
 Chart.register(...registerables);
 

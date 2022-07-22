@@ -31,6 +31,7 @@ export const NewsMenuItemlink = styled.a`
   display: flex;
   align-items: center;
   gap: 5px;
+  cursor: pointer;
 `;
 export const NewsMenuItemDate = styled.span`
   font-weight: 400;

@@ -15,13 +15,14 @@ export const SearchLinks = styled.div`
   align-items: center;
   gap: 30px;
 `;
-export const SearchLink = styled.a`
+export const SearchLink = styled.button`
   font-weight: 400;
   font-size: 16px;
   padding: 10px;
   display: flex;
   align-items: center;
   gap: 5px;
+  border: none;
   color: ${(props) =>
     props.active ? '#000' : "#f5f5f5"};
   cursor: pointer;

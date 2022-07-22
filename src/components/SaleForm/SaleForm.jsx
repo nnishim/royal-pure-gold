@@ -71,7 +71,7 @@ function SaleForm() {
           {inputs.map((input) => {
             return (
               <FormInputBlock key={input.id}>
-                <FormInputField onChange={e => setPrice(e.target.value)} type={"number"} placeholder={input.placeholder} />
+                <FormInputField onChange={e => input.id === 1 ? setPrice(e.target.value) : null} type={"number"} placeholder={input.placeholder} />
                 <FormInputSpan>сом</FormInputSpan>
               </FormInputBlock>
             );

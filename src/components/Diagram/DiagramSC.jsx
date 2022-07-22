@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const DiagramSC = styled.div`
-  max-width: 900px;
+  width: 900px;
   margin: 0 auto;
   background: #1d1d1d;
-  box-shadow: 0px 265px 106px rgba(0, 0, 0, 0.02),
-    0px 149px 89px rgba(0, 0, 0, 0.06), 0px 66px 66px rgba(0, 0, 0, 0.1),
-    0px 17px 36px rgba(0, 0, 0, 0.12), 0px 0px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 265px 106px rgba(0, 0, 0, 0.02),
+    0 149px 89px rgba(0, 0, 0, 0.06), 0 66px 66px rgba(0, 0, 0, 0.1),
+    0 17px 36px rgba(0, 0, 0, 0.12), 0 0 0 rgba(0, 0, 0, 0.12);
   border-radius: 10px;
   padding: 30px 80px;
 `;
@@ -27,7 +27,6 @@ export const DiagramTop = styled.div`
 export const DiagramYears = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
   justify-content: space-between;
   width: 100%;
   position: relative;
