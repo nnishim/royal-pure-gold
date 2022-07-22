@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/nnishim/rpg/static/css/main.2955d138.css",
+    "main.js": "/nnishim/rpg/static/js/main.d128aeb4.js",
+    "static/js/787.9b68bee2.chunk.js": "/nnishim/rpg/static/js/787.9b68bee2.chunk.js",
+    "index.html": "/nnishim/rpg/index.html",
+    "main.2955d138.css.map": "/nnishim/rpg/static/css/main.2955d138.css.map",
+    "main.d128aeb4.js.map": "/nnishim/rpg/static/js/main.d128aeb4.js.map",
+    "787.9b68bee2.chunk.js.map": "/nnishim/rpg/static/js/787.9b68bee2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2955d138.css",
+    "static/js/main.d128aeb4.js"
+  ]
+}
