@@ -22,15 +22,12 @@ function App() {
         <Search/>
         <Table setTableCount={setTableCount}/>
         <Routes>
-          <Route path="/stock" element={<Footer/>}/>
-          <Route path="/fonds" element={''}/>
+          <Route path="sale" element={<SaleForm/>}/>
+          <Route path="chat" element={<ChatMenu/>}/>
+          <Route path="news" element={<NewsMenu/>}/>
+          <Route path="bank/*" element={<BankingMenu/>}/>
         </Routes>
-        {/*<Routes>*/}
-        {/*  <Route path="sale" element={<SaleForm/>}/>*/}
-        {/*  <Route path="chat" element={<ChatMenu/>}/>*/}
-        {/*  <Route path="news" element={<NewsMenu/>}/>*/}
-        {/*  <Route path="bank/*" element={<BankingMenu/>}/>*/}
-        {/*</Routes>*/}
+        <Footer/>
       </WrapperSC>
     </>
   );

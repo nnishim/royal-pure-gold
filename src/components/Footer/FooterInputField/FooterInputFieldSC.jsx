@@ -28,9 +28,16 @@ export const InputFieldInput = styled.input`
   border: none;
   color: #fff;
   width: 100%;
+  background: ${(props) => (props.arrow ? 'url("./images/arrow-bottom.svg") no-repeat right' : 'none')};
+  background-position-x: calc(100% - 10px);
   background-color: #2e2e2e;
   ::placeholder {
     color: #fff;
+  }
+  ::-webkit-outer-spin-button,
+  ::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; 
   }
 `;
 export const InputFieldCheckboxes = styled.div`

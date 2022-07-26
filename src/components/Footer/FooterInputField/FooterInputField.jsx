@@ -15,13 +15,7 @@ function FooterInputField() {
           </InputFieldSelec>
         </InputFieldSC>
         <InputFieldSC>
-          <InputFieldSelec name="count">
-            <InputFieldOption value="Количество">Количество</InputFieldOption>
-            <InputFieldOption value="Количество">Количество</InputFieldOption>
-            <InputFieldOption value="Количество">Количество</InputFieldOption>
-            <InputFieldOption value="Количество">Количество</InputFieldOption>
-            <InputFieldOption value="Количество">Количество</InputFieldOption>
-          </InputFieldSelec>
+          <InputFieldInput placeholder='Количество' type='number' arrow />
         </InputFieldSC>
         <InputFieldSC>
           <InputFieldInput placeholder="Основание"/>

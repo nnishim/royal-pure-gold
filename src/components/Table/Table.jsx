@@ -77,43 +77,43 @@ function Table({setTableCount}) {
               ))}
             </TableRightMenu>
             <TableItem setTableCount={setTableCount}/>
-            <TableLeftMenu>
-              {icons.map((icon) => {
-                return (
-                  <TableLeftLink key={icon.id}>
-                    <Tooltip>{icon.text}</Tooltip>
-                    <Icon src={icon.img}/>
-                  </TableLeftLink>
-                )
-              })}
-            </TableLeftMenu>
             {/*<TableLeftMenu>*/}
-            {/*  <NavLink className={({isActive}) => isActive ? 'active-link' : ''} to='/sale'>*/}
-            {/*    <TableLeftLink>*/}
-            {/*      <Tooltip>Спот</Tooltip>*/}
-            {/*      <IconOneSVG/>*/}
-            {/*    </TableLeftLink>*/}
-            {/*  </NavLink>*/}
-
-            {/*  <NavLink className={({isActive}) => isActive ? 'active-link' : ''} to='/chat'>*/}
-            {/*    <TableLeftLink>*/}
-            {/*      <Tooltip>Спот</Tooltip>*/}
-            {/*      <IconTwoSVG/>*/}
-            {/*    </TableLeftLink>*/}
-            {/*  </NavLink>*/}
-            {/*  <NavLink className={({isActive}) => isActive ? 'active-link' : ''} to='/news'>*/}
-            {/*    <TableLeftLink>*/}
-            {/*      <Tooltip>Спот</Tooltip>*/}
-            {/*      <IconThreeSVG/>*/}
-            {/*    </TableLeftLink>*/}
-            {/*  </NavLink>*/}
-            {/*  <NavLink className={({isActive}) => isActive ? 'active-link' : ''} to='/bank'>*/}
-            {/*    <TableLeftLink>*/}
-            {/*      <Tooltip>Спот</Tooltip>*/}
-            {/*      <IconFourSVG/>*/}
-            {/*    </TableLeftLink>*/}
-            {/*  </NavLink>*/}
+            {/*  {icons.map((icon) => {*/}
+            {/*    return (*/}
+            {/*      <TableLeftLink key={icon.id}>*/}
+            {/*        <Tooltip>{icon.text}</Tooltip>*/}
+            {/*        <Icon src={icon.img}/>*/}
+            {/*      </TableLeftLink>*/}
+            {/*    )*/}
+            {/*  })}*/}
             {/*</TableLeftMenu>*/}
+            <TableLeftMenu>
+              <NavLink className={({isActive}) => isActive ? 'active-link' : ''} to='/sale'>
+                <TableLeftLink>
+                  <Tooltip>Спот</Tooltip>
+                  <IconOneSVG/>
+                </TableLeftLink>
+              </NavLink>
+
+              <NavLink className={({isActive}) => isActive ? 'active-link' : ''} to='/chat'>
+                <TableLeftLink>
+                  <Tooltip>Спот</Tooltip>
+                  <IconTwoSVG/>
+                </TableLeftLink>
+              </NavLink>
+              <NavLink className={({isActive}) => isActive ? 'active-link' : ''} to='/news'>
+                <TableLeftLink>
+                  <Tooltip>Спот</Tooltip>
+                  <IconThreeSVG/>
+                </TableLeftLink>
+              </NavLink>
+              <NavLink className={({isActive}) => isActive ? 'active-link' : ''} to='/bank'>
+                <TableLeftLink>
+                  <Tooltip>Спот</Tooltip>
+                  <IconFourSVG/>
+                </TableLeftLink>
+              </NavLink>
+            </TableLeftMenu>
           </TableContent>
         </Container>
       </TableSC>
