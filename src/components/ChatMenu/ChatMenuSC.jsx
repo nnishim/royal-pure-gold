@@ -67,6 +67,7 @@ export const ChatMenuField = styled.div`
   position: absolute;
   bottom: 5px;
   left: 0;
+  margin-left: -15px;
   display: flex;
   align-items: center;
 `

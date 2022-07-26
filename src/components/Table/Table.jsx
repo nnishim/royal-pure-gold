@@ -17,6 +17,7 @@ import {
 } from "./TableSC";
 import './Table.css'
 import {Link, NavLink} from "react-router-dom";
+import {ClickAwayListener} from "@mui/material";
 
 function Table({setTableCount}) {
   const [links, setLinks] = useState([
@@ -29,11 +30,11 @@ function Table({setTableCount}) {
     {id: 7, name: "Валютный рынок", isActive: false},
   ]);
 
-  const [icons, setIcons] = useState([
-    {id: 1, img: './images/left-menu-icon1.svg', isActive: false, text: 'Спот'},
-    {id: 2, img: './images/left-menu-icon2.svg', isActive: false, text: 'Спот'},
-    {id: 3, img: './images/left-menu-icon3.svg', isActive: false, text: 'Спот'},
-    {id: 4, img: './images/left-menu-icon4.svg', isActive: false, text: 'Спот'},
+  const [menuLinks, setMenuLinks] = useState([
+    {id: 1, href: '/sale'},
+    {id: 2, href: '/chat'},
+    {id: 3, href: '/news'},
+    {id: 4, href: '/bank'},
   ])
 
   const toggleActive = (linkId) => {
@@ -47,17 +48,23 @@ function Table({setTableCount}) {
       )
     );
   };
-  const toggleIconActive = (iconId) => {
-    setIcons((icons) =>
-      icons.map((icon) =>
-        iconId !== icon.id
-          ? {...icon, isActive: false}
-          :  iconId === icon.id
-            ? {...icon, isActive: !icon.isActive}
-            : icon
-      )
-    );
+  const handleClickAway = () => {
+    setMenuLinks(state => ({
+      ...state,
+        href: '/'
+    }))
   };
+  // const toggleIconActive = (iconId) => {
+  //   setIcons((icons) =>
+  //     icons.map((icon) =>
+  //       iconId !== icon.id
+  //         ? {...icon, isActive: false}
+  //         :  iconId === icon.id
+  //           ? {...icon, isActive: !icon.isActive}
+  //           : icon
+  //     )
+  //   );
+  // };
 
   return (
     <>
@@ -88,31 +95,41 @@ function Table({setTableCount}) {
             {/*  })}*/}
             {/*</TableLeftMenu>*/}
             <TableLeftMenu>
-              <NavLink className={({isActive}) => isActive ? 'active-link' : ''} to='/sale'>
-                <TableLeftLink>
-                  <Tooltip>Спот</Tooltip>
-                  <IconOneSVG/>
-                </TableLeftLink>
-              </NavLink>
+              <ClickAwayListener onClickAway={handleClickAway}>
+                <NavLink className={({isActive}) => isActive ? 'active-link' : ''} to={menuLinks[0].href}>
+                  <TableLeftLink>
+                    <Tooltip>Спот</Tooltip>
+                    <IconOneSVG/>
+                  </TableLeftLink>
+                </NavLink>
+              </ClickAwayListener>
+              <ClickAwayListener onClickAway={handleClickAway}>
 
-              <NavLink className={({isActive}) => isActive ? 'active-link' : ''} to='/chat'>
-                <TableLeftLink>
-                  <Tooltip>Спот</Tooltip>
-                  <IconTwoSVG/>
-                </TableLeftLink>
-              </NavLink>
-              <NavLink className={({isActive}) => isActive ? 'active-link' : ''} to='/news'>
-                <TableLeftLink>
-                  <Tooltip>Спот</Tooltip>
-                  <IconThreeSVG/>
-                </TableLeftLink>
-              </NavLink>
-              <NavLink className={({isActive}) => isActive ? 'active-link' : ''} to='/bank'>
-                <TableLeftLink>
-                  <Tooltip>Спот</Tooltip>
-                  <IconFourSVG/>
-                </TableLeftLink>
-              </NavLink>
+                <NavLink className={({isActive}) => isActive ? 'active-link' : ''} to={menuLinks[1].href}>
+                  <TableLeftLink>
+                    <Tooltip>Спот</Tooltip>
+                    <IconTwoSVG/>
+                  </TableLeftLink>
+                </NavLink>
+              </ClickAwayListener>
+              <ClickAwayListener onClickAway={handleClickAway}>
+
+                <NavLink className={({isActive}) => isActive ? 'active-link' : ''} to={menuLinks[2].href}>
+                  <TableLeftLink>
+                    <Tooltip>Спот</Tooltip>
+                    <IconThreeSVG/>
+                  </TableLeftLink>
+                </NavLink>
+              </ClickAwayListener>
+              <ClickAwayListener onClickAway={handleClickAway}>
+
+                <NavLink className={({isActive}) => isActive ? 'active-link' : ''} to={menuLinks[3].href}>
+                  <TableLeftLink>
+                    <Tooltip>Спот</Tooltip>
+                    <IconFourSVG/>
+                  </TableLeftLink>
+                </NavLink>
+              </ClickAwayListener>
             </TableLeftMenu>
           </TableContent>
         </Container>

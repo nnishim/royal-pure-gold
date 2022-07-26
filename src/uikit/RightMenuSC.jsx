@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const RightMenuSC = styled.div`
-  height: 100%;
+  height: 100vh;
   width: 500px;
   padding: 55px 20px 0 20px;
   background: #2e2e2e;

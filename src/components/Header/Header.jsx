@@ -162,7 +162,6 @@ function Header() {
         </HeaderContent>
       </Container>
     </HeaderSC>
-    7
   </>);
 }
 
